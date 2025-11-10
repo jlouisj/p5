@@ -13,7 +13,7 @@ let shirtColor = "#44094E";
 let upperLip = "#1F0A01"
 let btmLip = "#2E0105"
 function setup() {
-  createCanvas(500, 500);
+  cnv = createCanvas(500, 500);
   rectMode(CENTER);
   angleMode(DEGREES);
 
@@ -109,8 +109,12 @@ function draw() {
     arc(205,289,10,16,270,45);
     arc(300,289,10,16,135,270);
   
-  // HAIRLINE
-  
-  // SHIRT
-  
 }
+  // SAVE PNG
+  function keyTyped(){
+    if (key === 's'){
+      saveCanvas('pxp','png')
+      console.log("saving file")
+
+    }
+  }
